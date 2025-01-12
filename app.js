@@ -1,14 +1,15 @@
-const express = require('express');
-const { router } = require('./routes/router');
-
+import express from 'express';
+import router from './routes/router.js';
+import { connectToDatabase } from './config/dbConnect.js';
 const app = express();
 
-app.use('/', router);
+console.log(router);
+// app.use('/', router);
 
-//lco3000/register-post
 
 app.listen(3000, ()=>{
-    console.log(`server is listen at port : 3000`)
+    console.log(`server is listen at port : 3000`);
+    connectToDatabase();
 });
 
 
