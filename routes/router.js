@@ -2,7 +2,7 @@ import express from 'express';
 import { insert } from '../controller/userController.js';
 const router = express.Router();
 
-router.post('/register', insert);
+router.get('/register', insert);
 
 export default router;
 

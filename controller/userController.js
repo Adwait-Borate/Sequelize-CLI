@@ -1,6 +1,6 @@
-
+import { User } from '../models/user.js';
 export const insert = (req, res)=>{
-    const {firstName, lastName, email} = req.body;
-    res.status(200).json({message:"User inserted"});
+   const Data=User.build({name: 'John Doe'});
+   console.log(Data);
 };
 
